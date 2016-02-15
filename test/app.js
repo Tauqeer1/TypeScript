@@ -95,8 +95,20 @@ console.log(aType.name);
 var abb = 2;
 var abbc = abb;
 console.log(typeof abbc);
-var aaa = 2;
-var aab;
-console.log("type of" + typeof (aab = aaa));
 //In const enum we can not get colorName with index value
+var tuple = [1, "Hello", 2];
+var var1;
+var var2;
+var var3;
+var2 = [false, 1, 'sds'];
+var3 = [1, 2, 3];
+var3 = ['dsd', 'sdsd', 'sdsd'];
+var3 = [false, true, false];
+var1 = [1, 2, 3, 4, 5, ''];
+var1 = [true, false];
+var1 = ['sdsd', 'sss', 'sdsds', 'zx'];
+var1 = [false, 1, "sds"];
+var3 = [1, 'sds', false];
+var d = (function (a, b) { return ++a; })(1, 2);
+console.log(d);
 //# sourceMappingURL=app.js.map

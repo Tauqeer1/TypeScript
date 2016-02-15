@@ -134,5 +134,24 @@ console.log(typeof abbc);
 
 //In const enum we can not get colorName with index value
 
+let tuple : [number ,string, number] = [1,"Hello",2];
 
 
+type arr1 = number[] | string[] | boolean[] | any[];
+type arr2 = Array<number|string|boolean>;
+type arr3 = Array<number> | Array<string> | Array<boolean> | Array<any>;
+let var1 : arr1;
+let var2 : arr2;
+let var3 : arr3;
+var2 = [false,1,'sds'];
+var3 = [1,2,3];
+var3 = ['dsd','sdsd','sdsd'];
+var3 = [false,true,false];
+var1 = [1,2,3,4,5,''];
+var1 = [true,false];
+var1 = ['sdsd','sss','sdsds','zx'];
+var1 = [false,1,"sds"];
+
+var3 = [1,'sds',false];
+let d = ((a, b) => ++a)(1,2);        
+ console.log(d);
