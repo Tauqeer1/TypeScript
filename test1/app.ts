@@ -60,6 +60,27 @@ let a2 = a;
 // a2.eat();   //animal
 
 let a3 = h;
-a3.eat();   //Animal
+// a3.eat();   //Animal
 // a = r;      //2 < 1 Error
 // let wild : Animal = new WildAnimal("WildAnimal");   //Property name match error
+
+
+
+class A {
+    protected name : string;
+    constructor(name){
+        console.log("Parent constructor");
+        this.name = "Tauqeer";
+    }
+}
+class B extends A {
+    constructor(){
+        super(name);
+        console.log(name);
+    }
+   
+}
+let a1 : A = new A("sds");
+let b : B = new B();
+// console.log(b.name);
+

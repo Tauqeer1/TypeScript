@@ -1,3 +1,8 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var Human = (function () {
     function Human(n) {
         this.name = n;
@@ -54,7 +59,25 @@ h = a;
 var a2 = a;
 // a2.eat();   //animal
 var a3 = h;
-a3.eat(); //Animal
+// a3.eat();   //Animal
 // a = r;      //2 < 1 Error
-// let wild : Animal = new WildAnimal("WildAnimal");   //Property name match error 
+// let wild : Animal = new WildAnimal("WildAnimal");   //Property name match error
+var A = (function () {
+    function A(name) {
+        console.log("Parent constructor");
+        this.name = "Tauqeer";
+    }
+    return A;
+})();
+var B = (function (_super) {
+    __extends(B, _super);
+    function B() {
+        _super.call(this, name);
+        console.log(name);
+    }
+    return B;
+})(A);
+var a1 = new A("sds");
+var b = new B();
+// console.log(b.name);
 //# sourceMappingURL=app.js.map
