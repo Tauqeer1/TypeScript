@@ -1,4 +1,3 @@
-
 /*
 Interface types have many similarities to type aliases for object type literals, but since interface types offer more capabilities they are generally preferred to type aliases. For example, the interface type
 
@@ -19,36 +18,21 @@ However, doing so means the following capabilities are lost:
 
 
  */
-
-interface SearchFunc {
-    //No name is assigned to the function signature
-    (source : string , subString : string) : boolean;
-    
-}
-
-let mySearch : SearchFunc = function(src : string , sub : string){
-    
-    let result = src.search(sub);
-    if(result == -1){
+var mySearch = function (src, sub) {
+    var result = src.search(sub);
+    if (result == -1) {
         return false;
     }
-    else{
+    else {
         return true;
     }
-}
-
-let a = mySearch("This is Tauqeer ahmed shakir","tauqeer");
-console.log(a);     //false
-type myType = string | number | boolean;
-
-type anotherType = (source : string , subString : string) => boolean;
-
-let myFunc : anotherType = function(a : string , b : string) : boolean {
-    
-    return 
-}
-let anotherFunc : anotherType = function(a : string , b : number ) : boolean {
-    
-    return
-}
-
+};
+var a = mySearch("This is Tauqeer ahmed shakir", "tauqeer");
+console.log(a);
+var myFunc = function (a, b) {
+    return;
+};
+var anotherFunc = function (a, b) {
+    return;
+};
+//# sourceMappingURL=app.js.map
