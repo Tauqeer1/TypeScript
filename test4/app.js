@@ -87,7 +87,30 @@ var Employee1 = (function () {
 var employee = new Employee1();
 employee.fullName = "Bob smith";
 if (employee.fullName) {
-    console.log(employee.fullName);
 }
-console.log(employee.fullName);
+// console.log(employee.fullName);
+//Step 25 
+var Grid = (function () {
+    function Grid(scale) {
+        this.scale = scale;
+    }
+    Grid.prototype.calculateDistanceFromOrigin = function (point) {
+        var xDist = (point.x - Grid.origin.x);
+        var yDist = (point.y - Grid.origin.y);
+        return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+    };
+    Grid.origin = { x: 0, y: 0 };
+    return Grid;
+})();
+var grid1 = new Grid(3);
+var grid2 = new Grid(5);
+var MyClass = (function () {
+    function MyClass() {
+    }
+    MyClass.foo = function () {
+        console.log("Static foo");
+    };
+    return MyClass;
+})();
+MyClass.foo();
 //# sourceMappingURL=app.js.map
